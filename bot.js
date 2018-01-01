@@ -2,9 +2,6 @@ var Twit = require('twit');
 var config = require('./config.js');
 
 
-
-
-
 var T = new Twit(config);
 T.get('search/tweets' , {q : 'trump' , count : 100}, (err, data , response) => {
     var tweets = data.statuses;
